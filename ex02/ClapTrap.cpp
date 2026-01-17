@@ -8,7 +8,7 @@ ClapTrap:: ClapTrap(std::string n) : name(n){
 }
 ClapTrap::ClapTrap(const ClapTrap& other) {
     *this = other;
-    std::cout << "copy constructor called " << std::endl;
+    std::cout << " copy constructor called " << std::endl;
 }
 ClapTrap& ClapTrap::operator=(const ClapTrap& other) {
     
@@ -20,7 +20,7 @@ ClapTrap& ClapTrap::operator=(const ClapTrap& other) {
     return *this;
 }
 ClapTrap::~ClapTrap() {
-    std::cout << "destructor Called " << std::endl;
+    std::cout << " ClapTrap destructor Called " << std::endl;
 }
 
  void ClapTrap::attack(const std::string& target) {

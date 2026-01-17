@@ -16,8 +16,8 @@ FragTrap& FragTrap::operator=(const FragTrap& other) {
     return *this;
 }
 FragTrap::~FragTrap(){
-    std::cout << " Fragtrap " << this->name << "destroyed" << std::endl;
+    std::cout << " Fragtrap " << this->name << " destroyed " << std::endl;
 }
 void FragTrap::highFivesGuys(void){
-    std::cout << "FragTrap" << this->name << "has a positive high five request" << std::endl;
+    std::cout << " FragTrap " << this->name << " has a positive high five request " << std::endl;
 }
