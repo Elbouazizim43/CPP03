@@ -3,15 +3,15 @@
 ScavTrap::ScavTrap(){
     std::cout << " default construtor called " << std::endl;
     this->hitPoint = 100;
-    this->energyPoint = 100;
-    this->attackDamage = 50;
+    this->energyPoint = 50;
+    this->attackDamage = 20;
 }
 
 ScavTrap::ScavTrap(std::string name) : ClapTrap(name){
     std::cout << "ScavTrap" << this->name << "constructor called" << std::endl;
     this->hitPoint = 100;
-    this->energyPoint = 100;
-    this->attackDamage = 50;
+    this->energyPoint = 50;
+    this->attackDamage = 20;
 }
 
 ScavTrap::ScavTrap(const ScavTrap& other) : ClapTrap(other){
@@ -28,10 +28,16 @@ ScavTrap::~ScavTrap(){
     std::cout << " Scavtrap " << this->name << "destroyed" << std::endl;
 }
 void ScavTrap::attack(const std::string& target) {
-    if (this->energyPoint <= 0 || this->hitPoint <= 0) {
-        std::cout << "ScavTrap " << name << " can't attack!" << std::endl;
-        return;
-    }
+    if (this->energyPoint <= 0)
+        {
+            std::cout << "ClapTrap " << name << " had no energy and can't attack" << std::endl;
+            return; 
+        }
+    if (this->hitPoint <= 0)
+        {
+            std::cout << "ClapTrap " << name << " Already dead so he cant attack " << std::endl;
+            return; 
+        }
 
     this->energyPoint--;
     std::cout << "ScavTrap " << name
