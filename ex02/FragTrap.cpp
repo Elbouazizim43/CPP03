@@ -6,7 +6,7 @@ FragTrap::FragTrap(){
     this->attackDamage = 30;
 }
 FragTrap::FragTrap(std::string name) : ClapTrap(name){
-    std::cout << "FragTrap" << this->name << "constructor called" << std::endl;
+    std::cout << "FragTrap " << this->name << " constructor called" << std::endl;
     this->hitPoint = 100;
     this->energyPoint = 100;
     this->attackDamage = 30;
@@ -21,8 +21,8 @@ FragTrap& FragTrap::operator=(const FragTrap& other) {
     return *this;
 }
 FragTrap::~FragTrap(){
-    std::cout << " Fragtrap " << this->name << " destroyed " << std::endl;
+    std::cout << "Fragtrap " << this->name << " destroyed " << std::endl;
 }
 void FragTrap::highFivesGuys(void){
-    std::cout << " FragTrap " << this->name << " has a positive high five request " << std::endl;
+    std::cout << "FragTrap " << this->name << " has a positive high five request " << std::endl;
 }
