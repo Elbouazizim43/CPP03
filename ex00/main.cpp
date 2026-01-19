@@ -4,8 +4,8 @@ int main() {
     ClapTrap a("Mohammed");
 
     a.attack("Enemy");
-    a.takeDamage(5);
-    a.beRepaired(3);
+    a.takeDamage(4);
+    a.beRepaired(4294967295);
     a.attack("Boss");
     a.takeDamage(20);
     a.beRepaired(5);
