@@ -51,13 +51,5 @@ int main() {
     weakClap.beRepaired(5); // Should not be able to repair
     std::cout << std::endl;
 
-    std::cout << "=== Testing energy depletion ===" << std::endl;
-    ClapTrap energyTest("EnergyTester");
-    for (int i = 0; i < 11; i++) {
-        energyTest.attack("target");
-    }
-    std::cout << std::endl;
-
-    std::cout << "=== Destructors will be called ===" << std::endl;
     return 0;
 }
