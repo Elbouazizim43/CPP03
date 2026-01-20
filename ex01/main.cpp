@@ -1,5 +1,4 @@
 #include "ScavTrap.hpp"
-#include <iostream>
 
 int main() {
     std::cout << "=== Creating ClapTrap ===" << std::endl;

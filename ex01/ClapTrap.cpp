@@ -1,7 +1,7 @@
 #include"ClapTrap.hpp"
 
 ClapTrap::ClapTrap(){
-    
+
     std::cout << "default constructor called " << std::endl;
     this->hitPoint = 10;
     this->energyPoint = 10;
@@ -10,11 +10,10 @@ ClapTrap::ClapTrap(){
 ClapTrap:: ClapTrap(std::string n ) {
     std::cout << "claptrap " << n << " constractor called " << std::endl;
     this->name = n;
-    this->hitPoint = 10;
-    this->energyPoint = 10;
-    this->attackDamage = 0;
+    hitPoint = 10;
+    energyPoint = 10;
+    attackDamage = 0;
 }
-
 ClapTrap::ClapTrap(const ClapTrap& other) {
     std::cout << "copy constructor called " << std::endl;
     *this = other;
@@ -50,9 +49,10 @@ ClapTrap::~ClapTrap() {
 
  }
  void ClapTrap::takeDamage(unsigned int amount) {
-    this->hitPoint -= amount;
-    if (this->hitPoint < 0)
+     if (amount >= this->hitPoint)
         this->hitPoint = 0;
+    else
+        this->hitPoint -= amount;
     std::cout   << "ClapTrap " << this->name << " take " << amount 
                 << " damage and the hitpoints = " << this->hitPoint << std::endl;
 
@@ -70,8 +70,9 @@ ClapTrap::~ClapTrap() {
             return; 
         }
     this->hitPoint += amount;
+    if (this->hitPoint >= 4294967295)
+        this->hitPoint = 4294967295;
     this->energyPoint--;
     std::cout   << "ClapTrap " << this->name << " is repaired by " << amount 
                 << " and HP = " << this->hitPoint << std::endl;
-
  }
